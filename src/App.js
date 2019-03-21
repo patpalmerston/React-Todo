@@ -31,12 +31,24 @@ class App extends React.Component {
     };
   }
 
-  //event handlers
+  toggleItem = id => {
+    console.log('hello toggle');
+    this.setState({
+      todos: this.state.todos.map( item => {
+        if (item.id === id) {
+          return {
+            ...item,
+          completed: !item.completed
+          };
+        }
+        return item;
+      })
+    });
+  } 
 
 
   inputHandler = (event) => {
     this.setState({todoInput: event.target.value})
-    console.log(event.target);
   }
 
   submitTodo = (event) => {
@@ -52,9 +64,13 @@ class App extends React.Component {
 
 
   render() {
+    // console.log(() => this.toggleItem)
     return (
       <div className='App-wrapper'>
-        <TodoList todoList2={this.state.todos} />
+        <TodoList 
+          todoList2={this.state.todos}
+          toggle={this.toggleItem}
+        />
         <TodoForm funTime={this.submitTodo} notFunTime={this.inputHandler} input={this.state.todoInput} />
 
       </div>

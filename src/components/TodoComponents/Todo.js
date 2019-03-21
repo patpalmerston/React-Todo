@@ -1,8 +1,13 @@
 import React from 'react'
 
 const Todo = (props) => {
+  // console.log(props.todo);
   return (
-  <p>{props.todo.task}</p>
+    <div onClick={props.toggle}>
+
+      <p>{props.todo.task}</p>
+
+    </div>
   )
 }
 
