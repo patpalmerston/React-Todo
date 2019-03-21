@@ -36,6 +36,7 @@ class App extends React.Component {
 
   inputHandler = (event) => {
     this.setState({todoInput: event.target.value})
+    console.log(event.target);
   }
 
   submitTodo = (event) => {
@@ -43,7 +44,7 @@ class App extends React.Component {
     let todosCopy = this.state.todos.slice()
     todosCopy.push({
       task: this.state.todoInput,
-      id: ++id,
+      id: Date.now(),
       completed: false
     })
     this.setState({todos: todosCopy, todoInput: ''})
