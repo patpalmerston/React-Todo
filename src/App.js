@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
@@ -32,7 +33,7 @@ class App extends React.Component {
   }
 
   toggleItem = id => {
-    console.log('hello toggle');
+    // console.log('hello toggle');
     this.setState({
       todos: this.state.todos.map( item => {
         if (item.id === id) {
@@ -69,7 +70,7 @@ class App extends React.Component {
       <div className='App-wrapper'>
         <TodoList 
           todoList2={this.state.todos}
-          toggle={this.toggleItem}
+          toggleItem={this.toggleItem}
         />
         <TodoForm funTime={this.submitTodo} notFunTime={this.inputHandler} input={this.state.todoInput} />
 
