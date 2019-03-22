@@ -61,8 +61,13 @@ class App extends React.Component {
       completed: false
     })
     this.setState({todos: todosCopy, todoInput: ''})
-  }
+  };
 
+    clearCompleted = () => {
+      const clearedItem = this.state.todos.filter(
+        item => item.completed === !true)
+      this.setState({ todos: clearedItem });
+  }
 
   render() {
     // console.log(() => this.toggleItem)
@@ -73,7 +78,7 @@ class App extends React.Component {
           toggleItem={this.toggleItem}
         />
         <TodoForm funTime={this.submitTodo} notFunTime={this.inputHandler} input={this.state.todoInput} />
-
+        <button onClick={this.clearCompleted}>Clear Items</button>
       </div>
     );
   }
