@@ -73,12 +73,12 @@ class App extends React.Component {
     // console.log(() => this.toggleItem)
     return (
       <div className='App-wrapper'>
-        <TodoList 
-          todoList2={this.state.todos}
-          toggleItem={this.toggleItem}
-        />
-        <TodoForm funTime={this.submitTodo} notFunTime={this.inputHandler} input={this.state.todoInput} />
-        <button onClick={this.clearCompleted}>Clear Items</button>
+          <TodoList 
+            todoList2={this.state.todos}
+            toggleItem={this.toggleItem}
+          />
+          <TodoForm funTime={this.submitTodo} notFunTime={this.inputHandler} input={this.state.todoInput} />
+          <button onClick={this.clearCompleted}>Clear Items</button>
       </div>
     );
   }

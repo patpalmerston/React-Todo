@@ -1,6 +1,45 @@
-
-
 .completed {
-  background-color: grey;
+  background-color: lightgrey;
   text-decoration: line-through;
+  border: 1px solid darkblue;
+  
 }
+
+.list {
+  border: 1px solid red;
+  text-align: center;
+  font-size: 2rem;
+  color: grey;
+  margin: 1rem;
+}
+
+button {
+  width: 100%;
+  height: 2rem;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input {
+background-color: black;
+margin-left: 1.5rem;
+height: 1.5rem;
+text-align: center;
+color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.App-wrapper {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+  background-color: #AEE2E8;
+
+};
+
